@@ -1,0 +1,65 @@
+//*--------------- Parent Class Dice ---------------*/
+  public class Dice 
+  {	 
+  		private int numberofrolls = 0;
+  		private int numberofdices = 1;
+  		private int[] DiceArray = new int [10];
+
+  		
+  		
+  	
+  public void setDiceCount(int n )
+  	{	 
+/*--------------- Set number of dices ---------------*/  	  
+  		numberofdices = n;	  
+  	}	  
+  public Dice()
+  	{	 
+/*--------------- Dice Constructor    ---------------*/  	  
+  		numberofrolls = 0;		
+  		numberofdices = 1;	 	
+  	}	 
+  	
+  public int RollDice()	  
+/*--------------- Roll Dice(s) and increment RollCounts    ---------------*/   
+  	{	
+  		int rndno = 1;
+
+  		for(int lcv = 0; lcv < DiceArray.length; lcv++)
+  		{
+  			numberofrolls++;
+  			numberofdices++;
+  			DiceArray[lcv] = 1 + (int) (Math.random() * 6);
+  		
+  			
+  			lcv++;
+  		}
+  	
+  		
+  		
+  		
+  		return rndno;
+  	
+  			
+  			 
+  	}	 
+  public int RollCount()	  
+  	{	  	
+  		return numberofrolls;	 
+  	}	  
+  public String RollCountMsg()	  
+  	{	  	
+  		return "Dices rolled thus far: " + numberofrolls ;	
+  	}
+  
+  public void RollHistory()
+  	{
+  		
+  		for (int lcv = 0; lcv < DiceArray.length; lcv++)
+  		{
+  			System.out.printf( "%5d%8d\n", lcv, DiceArray[lcv]);
+  			
+  		}
+  			   
+  	}
+}

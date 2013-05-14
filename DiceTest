@@ -1,0 +1,19 @@
+public class DicTest 
+{  /**	 * @param args	 */	
+  public static void main(String[] args)
+  {		
+  	// TODO Auto-generated method stub		
+  	Dice singleDice = new Dice();	
+  	Dice x3Dice = new TrippleDice();	
+  	
+  
+  	
+  	singleDice.RollDice();
+  	
+  
+  	
+  	
+  	singleDice.RollHistory();
+  
+  }
+}
